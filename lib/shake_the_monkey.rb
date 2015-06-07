@@ -4,7 +4,7 @@ class ShakeTheMonkey
 
   def initialize(string)
     @words = string.split.map { |word| normalise(word) }
-    @blank_spaces = string.split('').count(' ')
+    @blank_spaces = string.split('').count ' '
   end
 
   def search_for(word)
