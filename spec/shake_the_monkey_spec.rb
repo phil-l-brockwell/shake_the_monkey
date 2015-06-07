@@ -27,6 +27,12 @@ describe 'Shake_the_monkey' do
       .to eq(['w','o','r','d','s','a','r','r','a','y'])
   end
 
+  it 'can remove the special chars from an array of chars' do
+    mixed_array = ['a','b','@','/','c']
+    expect(shake_the_monkey.remove_special_from(mixed_array))
+      .to eq(['a','b','c'])
+  end
+
   it 'can shuffle an array of chars' do
     chars_array = ['c','h','a','r','s','a','r','r','a','y']
     allow(shake_the_monkey).to receive(:shuffle_chars).with(chars_array)

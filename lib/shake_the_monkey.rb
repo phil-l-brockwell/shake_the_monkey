@@ -8,6 +8,10 @@ class Shake_the_monkey
   end
 
   def search_for(word)
+    @words.include? word
+  end
+
+  def find(word)
     shuffle_words
     i = 1
     while !@words.include? word
@@ -40,5 +44,9 @@ class Shake_the_monkey
 
   def convert_to_strings(array_of_chars)
     array_of_chars.join.split
+  end
+
+  def remove_special_from(array_of_chars)
+    array_of_chars.join.gsub(/[^0-9A-Za-z]/, '').split('')
   end
 end
