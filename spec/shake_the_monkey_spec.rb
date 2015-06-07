@@ -31,8 +31,8 @@ describe 'Shake_the_monkey' do
     chars_array = ['c','h','a','r','s','a','r','r','a','y']
     allow(shake_the_monkey).to receive(:shuffle_chars).with(chars_array)
       .and_return(['h','c','a','r','s','a','r','r','a','y'])
-    expect(shake_the_monkey.shuffle_chars(chars_array)
-      .to eq(['h','c','a','r','s','a','r','r','a','y']))
+    expect(shake_the_monkey.shuffle_chars(chars_array))
+      .to eq(['h','c','a','r','s','a','r','r','a','y'])
   end
 
 end
