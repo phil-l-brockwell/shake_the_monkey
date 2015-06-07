@@ -12,14 +12,23 @@ class Shake_the_monkey
   end
 
   def find(word)
-    shuffle_words
+    first_shuffle
     i = 1
-    while !@words.include? word
+    while !search_for word
       puts i
       i += 1
       shuffle_words
     end
     puts "Found #{word}"
+  end
+
+  def first_shuffle
+    chars = split_into_chars(@words)
+    downcase_chars = downcase(chars)
+    unspecial_chars = remove_special_from(downcase_chars)
+    chars_with_blanks = add_blanks(downcase_chars)
+    shuffled_chars = shuffle_chars(chars_with_blanks)
+    @words = convert_to_strings(shuffled_chars)
   end
 
   def shuffle_words
@@ -48,5 +57,9 @@ class Shake_the_monkey
 
   def remove_special_from(array_of_chars)
     array_of_chars.join.gsub(/[^0-9A-Za-z]/, '').split('')
+  end
+
+  def downcase(array_of_chars)
+    array_of_chars.join.downcase.split('')
   end
 end

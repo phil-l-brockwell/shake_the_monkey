@@ -33,6 +33,12 @@ describe 'Shake_the_monkey' do
       .to eq(['a','b','c'])
   end
 
+  it 'can downcase all the chars in array' do
+    mixed_case_array = ['A','b','c','D']
+    expect(shake_the_monkey.downcase(mixed_case_array))
+      .to eq(['a','b','c','d'])
+  end
+
   it 'can shuffle an array of chars' do
     chars_array = ['c','h','a','r','s','a','r','r','a','y']
     allow(shake_the_monkey).to receive(:shuffle_chars).with(chars_array)
