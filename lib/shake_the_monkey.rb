@@ -23,4 +23,8 @@ class Shake_the_monkey
     array_of_chars.shuffle
   end
 
+  def convert_to_strings(array_of_chars)
+    array_of_chars.join.split
+  end
+
 end

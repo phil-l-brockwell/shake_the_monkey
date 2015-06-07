@@ -1,7 +1,7 @@
 require 'shake_the_monkey'
 
 describe 'Shake_the_monkey' do
-  let(:test_string)      { 'test 1'                  }
+  let(:test_string)      { 'test 1'                          }
   let(:shake_the_monkey) { Shake_the_monkey.new(test_string) }
 
   it 'initialises with an array of words' do
@@ -33,6 +33,12 @@ describe 'Shake_the_monkey' do
       .and_return(['h','c','a','r','s','a','r','r','a','y'])
     expect(shake_the_monkey.shuffle_chars(chars_array))
       .to eq(['h','c','a','r','s','a','r','r','a','y'])
+  end
+
+  it 'can join an array of chars into an array of string' do
+    chars_array = ['h','c',' ',' ','s','a','r',' ','a','y']
+    expect(shake_the_monkey.convert_to_strings(chars_array))
+      .to eq(['hc', 'sar', 'ay'])
   end
 
 end
