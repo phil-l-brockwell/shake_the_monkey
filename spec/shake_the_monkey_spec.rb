@@ -2,7 +2,7 @@ require 'shake_the_monkey'
 
 describe 'Shake_the_monkey' do
   let(:test_string)      { 'test 1'                          }
-  let(:shake_the_monkey) { ShakeTheMonkey.new(test_string) }
+  let(:shake_the_monkey) { ShakeTheMonkey.new(test_string)   }
 
   it 'initialises with an array of words' do
     expect(shake_the_monkey.words).to eq(%w(test 1))

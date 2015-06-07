@@ -23,10 +23,10 @@ class ShakeTheMonkey
   end
 
   def shuffle_words
-    chars = split_into_chars(@words)
-    chars_with_blanks = add_blanks(chars)
-    shuffled_chars = shuffle_chars(chars_with_blanks)
-    @words = convert_to_strings(shuffled_chars)
+    chars = split_into_chars @words
+    chars_with_blanks = add_blanks chars
+    shuffled_chars = shuffle_chars chars_with_blanks
+    @words = convert_to_strings shuffled_chars
   end
 
   def add_blanks(array_of_chars)
@@ -35,7 +35,7 @@ class ShakeTheMonkey
   end
 
   def split_into_chars(array_of_words)
-    array_of_words.join.split('')
+    array_of_words.join.split ''
   end
 
   def shuffle_chars(array_of_chars)
