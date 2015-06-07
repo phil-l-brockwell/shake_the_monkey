@@ -8,7 +8,14 @@ class Shake_the_monkey
   end
 
   def search_for(word)
-    @words.include? word
+    shuffle_words
+    i = 1
+    while !@words.include? word
+      puts i
+      i += 1
+      shuffle_words
+    end
+    puts "Found #{word}"
   end
 
   def shuffle_words
@@ -34,5 +41,4 @@ class Shake_the_monkey
   def convert_to_strings(array_of_chars)
     array_of_chars.join.split
   end
-
 end
