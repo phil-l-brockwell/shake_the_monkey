@@ -11,8 +11,16 @@ class Shake_the_monkey
     @words.include? word
   end
 
-  def add_blanks
-    @blank_spaces.times { @words << ' ' }
+  def shuffle_words
+    chars = split_into_chars(@words)
+    chars_with_blanks = add_blanks(chars)
+    shuffled_chars = shuffle_chars(chars_with_blanks)
+    @words = convert_to_strings(shuffled_chars)
+  end
+
+  def add_blanks(array_of_chars)
+    @blank_spaces.times { array_of_chars << ' ' }
+    array_of_chars
   end
 
   def split_into_chars(array_of_words)

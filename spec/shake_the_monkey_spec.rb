@@ -16,9 +16,9 @@ describe 'Shake_the_monkey' do
     expect(shake_the_monkey.search_for('test')).to be(true)
   end
 
-  it 'can add the blank spaces back into the array of words' do
-    shake_the_monkey.add_blanks
-    expect(shake_the_monkey.words).to eq(['test','1',' '])
+  it 'can add the blank spaces into the array of words' do
+    expect(shake_the_monkey.add_blanks(['test', '1']))
+      .to eq(['test','1',' '])
   end
 
   it 'can split an array of words into an array of chars' do
@@ -41,4 +41,10 @@ describe 'Shake_the_monkey' do
       .to eq(['hc', 'sar', 'ay'])
   end
 
+  it 'can return a shuffled version of the words array' do
+    allow(shake_the_monkey).to receive(:shuffle_words)
+      .and_return(['t1', 'ste'])
+    expect(shake_the_monkey.shuffle_words)
+      .to eq(['t1', 'ste'])
+  end
 end
