@@ -1,5 +1,5 @@
-class Shake_the_monkey
-
+# Main class
+class ShakeTheMonkey
   attr_reader :words, :blank_spaces
 
   def initialize(string)
@@ -14,7 +14,7 @@ class Shake_the_monkey
   def find(word)
     shuffle_words
     i = 1
-    while !search_for word
+    until search_for word
       puts i
       i += 1
       shuffle_words
