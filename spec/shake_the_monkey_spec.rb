@@ -27,18 +27,6 @@ describe 'Shake_the_monkey' do
       .to eq(['w','o','r','d','s','a','r','r','a','y'])
   end
 
-  it 'can remove the special chars from an array of chars' do
-    mixed_array = ['a','b','@','/','c']
-    expect(shake_the_monkey.remove_special_from(mixed_array))
-      .to eq(['a','b','c'])
-  end
-
-  it 'can downcase all the chars in array' do
-    mixed_case_array = ['A','b','c','D']
-    expect(shake_the_monkey.downcase(mixed_case_array))
-      .to eq(['a','b','c','d'])
-  end
-
   it 'can shuffle an array of chars' do
     chars_array = ['c','h','a','r','s','a','r','r','a','y']
     allow(shake_the_monkey).to receive(:shuffle_chars).with(chars_array)
@@ -58,5 +46,17 @@ describe 'Shake_the_monkey' do
       .and_return(['t1', 'ste'])
     expect(shake_the_monkey.shuffle_words)
       .to eq(['t1', 'ste'])
+  end
+
+  it 'can remove the special chars from a string' do
+    mixed_array = 'ab@/c'
+    expect(shake_the_monkey.normalise(mixed_array))
+      .to eq('abc')
+  end
+
+  it 'can downcase all the chars in a string' do
+    mixed_case_array = 'AbcD'
+    expect(shake_the_monkey.normalise(mixed_case_array))
+      .to eq('abcd')
   end
 end
