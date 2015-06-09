@@ -1,5 +1,13 @@
 <h1>Shake The Monkey</h1>
 
+You searched for <%= @search %> in
+
+<br>
+
 <%= @words %>
 <br><br>
 <%= @message %>
+
+<form action='/new_search' method='post'>
+  <input type='submit' value='Try again...'>
+</form>

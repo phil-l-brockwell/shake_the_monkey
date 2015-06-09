@@ -10,9 +10,9 @@ end
 
 post '/new_search' do
   shake.shuffle_words
-  word = params[:search]
+  @search = params[:search]
   
-  if shake.search_for word
+  if shake.search_for @search
     @message = 'Found it'
   else
     @message = 'Not this time...'
