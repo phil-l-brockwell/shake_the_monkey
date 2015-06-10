@@ -1,9 +1,9 @@
 require 'shake_the_monkey'
 
 describe 'Shake_the_monkey' do
-  let(:test_string)      { 'test 1'                          }
-  let(:shake_the_monkey) { ShakeTheMonkey.new(test_string)   }
-  let(:test_word)        { double :test_word, text: 'test'   }
+  let(:test_string)      { 'test 1'                         }
+  let(:shake_the_monkey) { ShakeTheMonkey.new(test_string)  }
+  let(:test_word)        { double :test_word, text: 'test'  }
 
   it 'initialises with an array of words' do
     expect(shake_the_monkey.words).to eq(%w(test 1))
@@ -13,8 +13,14 @@ describe 'Shake_the_monkey' do
     expect(shake_the_monkey.blank_spaces).to eq(1)
   end
 
-  it 'can perform a search' do
+  it 'can perform a search with a word' do
+    expect(test_word).to receive(:add_search)
     expect(shake_the_monkey.search_for(test_word)).to be(true)
+  end
+
+  it 'can increment a word objects searches' do
+    expect(test_word).to receive(:add_search)
+    shake_the_monkey.search_for(test_word)
   end
 
   it 'can add the blank spaces into the array of words' do
