@@ -19,6 +19,6 @@ post '/new_search' do
   end
 
   @words = shake.words.first(50)
-  erb :search
+  erb :index
 
 end
