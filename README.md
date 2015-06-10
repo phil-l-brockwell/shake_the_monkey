@@ -12,7 +12,7 @@ It will be able to shuffle the entire works of shakespeare, by character, search
 
 # So far...
 * Completed basic solution
-* Added Sinatra
+* Created basic web app with Sinatra
 
 # Next
-* Create basic web app
+* Use Cookies/Sessions to store data and repeat searches.
