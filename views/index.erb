@@ -1,10 +1,5 @@
 <h1>Shake The Monkey</h1>
 
-<form action='/new_search' method='post'>
-  <input type='text' name='search' placeholder='Enter a word...' required>
-  <input type='submit' value='Shake the Monkey!'>
-</form>
-
 <% if @search %>
 
 You searched for <%= @search %> in
@@ -14,5 +9,16 @@ You searched for <%= @search %> in
 <%= @words %>
 <br><br>
 <%= @message %>
+
+<form action='/new_search'  method='post'>
+  <input type='submit' value='Search again...'>
+</form>
+
+<% else %>
+
+<form action='/new_search' method='post'>
+  <input type='text' name='search' placeholder='Enter a word...' required>
+  <input type='submit' value='Shake the Monkey!'>
+</form>
 
 <% end %>

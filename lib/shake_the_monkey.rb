@@ -11,17 +11,6 @@ class ShakeTheMonkey
     @words.include? word
   end
 
-  def find(word)
-    shuffle_words
-    i = 1
-    until search_for word
-      puts i
-      i += 1
-      shuffle_words
-    end
-    puts "Found #{word}"
-  end
-
   def shuffle_words
     chars = split_into_chars @words
     chars_with_blanks = add_blanks chars
