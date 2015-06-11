@@ -1,29 +1,6 @@
 <h1>Shake The Monkey</h1>
 
-<% if @word %>
-
-  You searched for <%= @word.text %> in
-  <br>
-
-  <%= @words %>
-  <br><br>
-
-  <%= @word.searched_for %>
-  <br><br>
-
-  <%= @message %>
-  <br><br>
-
-  <% unless @word.found %>
-    <a href='/new_search'>Try again...</a>
-  <% end %>
-  <a href='/'>New Search</a>
-
-<% else %>
-
   <form action='/new_search' method='post'>
     <input type='text' name='search' placeholder='Enter a word...' required>
     <input type='submit' value='Shake the Monkey!'>
   </form>
-
-<% end %>

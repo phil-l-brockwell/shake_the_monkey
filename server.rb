@@ -27,5 +27,5 @@ get '/new_search' do
 
   @word = word
   @words = shake.words.first(50)
-  erb :index
+  erb :search
 end
