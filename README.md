@@ -16,5 +16,4 @@ It will be able to shuffle the entire works of shakespeare, by character, search
 
 # Next
 * Work on styling. Bootstrap
-* Add found variable to word class
 * Extract works of shakespeare to its own class
