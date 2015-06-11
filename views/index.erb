@@ -1,14 +1,19 @@
 <h1>Shake The Monkey</h1>
 
-<% if @search %>
+<% if @word %>
 
-You searched for <%= @search %> in
+You searched for <%= @word.text %> in
 
 <br>
 
 <%= @words %>
 <br><br>
+
+<%= @word.searched_for %>
+<br><br>
+
 <%= @message %>
+<br><br>
 
 <form action='/new_search'  method='post'>
   <input type='submit' value='Search again...'>

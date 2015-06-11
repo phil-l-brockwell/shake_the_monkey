@@ -2,9 +2,12 @@
 class Word
   attr_reader :text, :searched_for
 
-  def initialize(text)
-    @text = text.to_sym
+  def initialize
     @searched_for = 0
+  end
+
+  def add_text(string)
+    @text = string.to_sym
   end
 
   def add_search
