@@ -1,18 +1,16 @@
-<h1>Shake The Monkey</h1>
-
 You searched for <%= @word.text %> in
-  <br>
+<br>
 
-  <%= @words %>
-  <br><br>
+<%= @words %>
+<br><br>
 
-  <%= @word.searched_for %>
-  <br><br>
+<%= @word.searched_for %>
+<br><br>
 
-  <%= @message %>
-  <br><br>
+<%= @message %>
+<br><br>
 
-  <% unless @word.found %>
-    <a href='/new_search'>Try again...</a>
-  <% end %>
-  <a href='/'>New Search</a>
+<% unless @word.found %>
+  <a href='/new_search'>Try again...</a>
+<% end %>
+<a href='/'>New Search</a>
