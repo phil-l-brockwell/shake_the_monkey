@@ -12,7 +12,9 @@ It will be able to shuffle the entire works of shakespeare, by character, search
 
 # So far...
 * Completed basic solution, with two models
-* Created basic web app with Sinatra
+* Created basic web app with Sinatra, using sessions to repeat searches until found
 
 # Next
-* Use Cookies/Sessions to store data and repeat searches.
+* Work on styling. Bootstrap
+* Add found variable to word class
+* Extract works of shakespeare to its own class
