@@ -3,8 +3,6 @@ require_relative './lib/shake_the_monkey.rb'
 require_relative './lib/complete_works.rb'
 require_relative './lib/word.rb'
 
-enable :sessions
-
 shake = ShakeTheMonkey.new(SWORDS)
 word = Word.new
 
@@ -30,5 +28,4 @@ get '/new_search' do
   @word = word
   @words = shake.words.first(50)
   erb :index
-
 end

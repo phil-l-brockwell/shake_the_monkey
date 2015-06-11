@@ -16,4 +16,9 @@ describe 'word' do
     test_word.add_search
     expect(test_word.searched_for).to eq(1)
   end
+
+  it 'can be marked as found' do
+    test_word.mark_as_found
+    expect(test_word.found).to eq(true)
+  end
 end

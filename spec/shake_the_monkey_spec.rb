@@ -13,13 +13,15 @@ describe 'Shake_the_monkey' do
     expect(shake_the_monkey.blank_spaces).to eq(1)
   end
 
-  it 'can perform a search with a word' do
-    expect(test_word).to receive(:add_search)
-    expect(shake_the_monkey.search_for(test_word)).to be(true)
-  end
-
   it 'can increment a word objects searches' do
     expect(test_word).to receive(:add_search)
+    expect(test_word).to receive(:mark_as_found)
+    shake_the_monkey.search_for(test_word)
+  end
+
+  it 'can mark a word object as found' do
+    expect(test_word).to receive(:add_search)
+    expect(test_word).to receive(:mark_as_found)
     shake_the_monkey.search_for(test_word)
   end
 

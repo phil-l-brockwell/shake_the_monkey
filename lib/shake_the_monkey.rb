@@ -9,7 +9,7 @@ class ShakeTheMonkey
 
   def search_for(word)
     word.add_search
-    @words.include? word.text
+    word.mark_as_found if @words.include? word.text
   end
 
   def shuffle_words
