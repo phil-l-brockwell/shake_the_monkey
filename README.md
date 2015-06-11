@@ -11,7 +11,7 @@ Although this theory is not strictly true, this program will go some way to demo
 It will be able to shuffle the entire works of shakespeare, by character, search for a random word in the resulting works, and repeat the process until that word is found.
 
 # So far...
-* Completed basic solution
+* Completed basic solution, with two models
 * Created basic web app with Sinatra
 
 # Next
