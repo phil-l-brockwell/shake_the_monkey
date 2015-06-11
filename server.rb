@@ -14,7 +14,7 @@ end
 
 post '/new_search' do
   shake.shuffle_words
-  word.add_text(params[:search]) unless word.text
+  word.add_text(params[:search]) if params[:search]
   
   if shake.search_for word
     @message = 'Found it'

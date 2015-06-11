@@ -5,7 +5,7 @@ describe 'word' do
 
   it 'can add new text' do
     test_word.add_text('test')
-    expect(test_word.text).to eq(:test)
+    expect(test_word.text).to eq('test')
   end
 
   it 'knows how many times it has been searched' do

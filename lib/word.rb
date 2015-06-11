@@ -7,7 +7,7 @@ class Word
   end
 
   def add_text(string)
-    @text = string.to_sym
+    @text = string
   end
 
   def add_search
