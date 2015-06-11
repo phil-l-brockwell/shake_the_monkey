@@ -15,9 +15,9 @@ You searched for <%= @word.text %> in
 <%= @message %>
 <br><br>
 
-<form action='/new_search'  method='post'>
-  <input type='submit' value='Search again...'>
-</form>
+<a href='/new_search'>Try again...</a>
+<br>
+<a href='/'>New Search</a>
 
 <% else %>
 

@@ -13,8 +13,13 @@ get '/' do
 end
 
 post '/new_search' do
+  word = Word.new
+  word.add_text(params[:search])
+  redirect to '/new_search'
+end
+
+get '/new_search' do
   shake.shuffle_words
-  word.add_text(params[:search]) if params[:search]
   
   if shake.search_for word
     @message = 'Found it'
