@@ -1,4 +1,4 @@
-# Search class used to hold search string and number of times searched
+# Word class used to hold search string and number of times searched
 class Word
   attr_reader :text, :searched_for, :found
 

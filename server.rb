@@ -18,8 +18,9 @@ end
 
 get '/new_search' do
   shake.shuffle_words
+  shake.search_for word
   
-  if shake.search_for word
+  if word.found
     @message = 'Found it'
   else
     @message = 'Not this time...'
